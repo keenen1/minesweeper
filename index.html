@@ -6,10 +6,21 @@
     <script src="lib/tests.js"></script>
     <script src="lib/lib.js"></script>
     <script src="minesweeper.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
   </head>
   <body>
+    
     <div id="message"></div>
     <div id="notes"></div>
-    <div class="board"></div>
+    <div class="board" onmousedown="clickSound.play()"></div>
+    
+    <div class="reset" onclick="resetGame()">
+      Reset Button
+    </div>
+
+    <audio id="lostGame" src="audio/lost_game.mp3"></audio>
+    <audio id="wonGame" src="audio/win_game.mp3"></audio>
+    
   </body>
 </html>

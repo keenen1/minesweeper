@@ -8,12 +8,16 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
+  background-image: url("images/akatsuki.jpg");
+  background-size: cover;
 }
 
 #message, #notes {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: aliceblue;
+  text-transform: uppercase;
 }
 
 #message {
@@ -26,7 +30,7 @@ body {
 }
 
 .board div {
-  color: green;
+  color: darkred;
   font-size: 2rem;
   width: 75px;
   height: 75px;
@@ -37,24 +41,50 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Source Code Pro', monospace;
+
 }
 
 .board div:hover {
   background-color: white;
 }
 
-div.mine, div.mine:hover {
+div.mine {
   background: no-repeat center/60% url("images/bomb.svg") crimson;
 }
 
+div.mine:hover {
+  background-color: darkred;
+}
+
 div.hidden {
-  background: #eee;
+  background: rgba(204, 204, 204, 0.507);
 }
 
 div.hidden:hover {
-  background: #ccc;
+  background-color: rgba(204, 204, 204, 0.507);
+  background-image: url("images/sharingan.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.marked, div.marked:hover {
   background: no-repeat center/60% url("images/mark.svg") deepskyblue;
 }
+
+div.reset {
+  background-color: darkred;
+  color: white;
+  padding: 30px;
+  border-style: solid;
+  border-radius: 15px;
+  margin-top: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.reset:hover {
+  cursor: pointer;
+  background-color: white;
+  color: darkred;
+}
+
