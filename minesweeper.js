@@ -72,7 +72,6 @@ function generateBoard (num) {
 // 2. Are all of the mines marked?
 function checkForWin () {
   let gameBoard = board.cells;
-
   var win = 0;
   for (var i=0; i<gameBoard.length; i++) {
     if (gameBoard[i].isMine == true && gameBoard[i].isMarked == true){
@@ -103,7 +102,13 @@ function checkForWin () {
     // console.log("You Win!");
   }
 
+  // You can use this function call to declare a winner (once you've
+  // detected that they've won, that is!)
+  if (win == gameBoard.length){
 
+    lib.displayMessage('You win!');
+    console.log("You Win!");
+  }
 }
 
 // Define this function to count the number of mines around the cell
